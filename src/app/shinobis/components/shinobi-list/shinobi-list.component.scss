@@ -1,0 +1,36 @@
+.page-search {
+    display: flex;
+    margin: 16px 100px;
+    padding: 12px;
+
+    .record-count {
+        flex: 1;
+        align-content: center;
+
+        span {
+            background: #70c4d9;
+            border: 1px solid #5ea7b9;
+            border-radius: 25px;
+            padding: 6px;
+        }
+    }
+
+    .record-search {
+        flex: 1;
+    }
+}
+
+.page-list {
+    margin: 16px 100px;
+
+    .list-header {
+        display: flex;
+        padding: 12px;
+
+        .list-title {
+            flex: 1;
+            align-content: center;
+        }
+
+    }
+}

@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'ninja_world'`, () => {
+  it(`should have as title 'Ninja World'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('ninja_world');
+    expect(app.title).toEqual('Ninja World');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('ninja_world app is running!');
+    expect(compiled.querySelector('header h1')?.textContent).toContain('NINJA WORLD');
   });
 });

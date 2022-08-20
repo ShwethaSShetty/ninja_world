@@ -1,0 +1,25 @@
+<ng-container *ngIf="shinobiObservable$ | async as shinobis">
+    <div class="page-search">
+        <div class="record-count"><span>{{shinobis?.length}} Records </span></div>
+        <app-search class="record-search" [searchText]="searchText" (searchValueEmit)="filterShinobiList($event)">
+        </app-search>
+    </div>
+    <div class="page-list">
+        <h2>Shinobi List</h2>
+        <div class="list-header">
+            <div class="list-title" *ngFor="let title of shinobiListFields">
+                {{(title != 'image_url' ? title : "" )| uppercase }}
+            </div>
+        </div>
+        <div *ngIf="shinobis?.length; else showNotFound">
+            <ng-container *ngFor="let shinobi of shinobis">
+                <app-list-item [listFields]="shinobiListFields" [listObj]="shinobi"
+                    (click)="navigateToShinobiDetail(shinobi.id)"></app-list-item>
+            </ng-container>
+        </div>
+
+        <ng-template #showNotFound>
+            <div> No Record Found</div>
+        </ng-template>
+    </div>
+</ng-container>

@@ -1,0 +1,58 @@
+.shinobi-detail-wrapper {
+    margin: 16px 100px;
+
+    .detail-container {
+        display: flex;
+        align-items: stretch;
+        padding: 16px;
+        border: 1px solid #5ea7b9;
+        box-shadow: 5px 5px #70c4d9;
+        background: ghostwhite;
+        border-radius: 25px;
+
+        .avatar-container {
+            border-radius: 25px;
+
+            img {
+                width: 200px;
+                height: 200px;
+                border-radius: 25px;
+            }
+        }
+
+        .info-container {
+            margin-left: 20px;
+            width: 100%;
+
+            .info-field-container {
+                display: flex;
+                align-items: stretch;
+                width: 100%;
+                padding: 6px 12px;
+
+                .field-name {
+                    flex: 1 1 20%;
+                }
+
+                .field-value {
+                    flex: 1 1 80%;
+                }
+            }
+        }
+    }
+
+    .back-icon-container {
+        text-align: center;
+        display: flex;
+
+        img {
+            width: 40px;
+            height: 40px;
+        }
+
+        span {
+            align-self: center;
+            padding: 6px;
+        }
+    }
+}

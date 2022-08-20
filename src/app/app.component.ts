@@ -1,10 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'ninja_world';
+export class AppComponent implements OnInit{
+  title = 'Ninja World';
+  
+  ngOnInit(): void {
+   localStorage.removeItem('searchTxt');
+  }
 }

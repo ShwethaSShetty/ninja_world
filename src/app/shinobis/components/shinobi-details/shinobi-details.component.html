@@ -1,0 +1,20 @@
+<div class="shinobi-detail-wrapper">
+    <div class="back-icon-container">
+        <a (click)="navigateToList()">
+            <img alt="" src="../../../../assets/images/ga.jpeg" width="150" height="70">
+        </a>
+        <span>{{backToPrevious}}</span>
+    </div>
+
+    <div class="detail-container" *ngIf="shinobiDetail">
+        <div class="avatar-container">
+            <img class="avatar-detail" [src]="shinobiDetail?.image_url" />
+        </div>
+        <div class="info-container">
+            <div class="info-field-container" *ngFor="let key of shinobiKeys()">
+                <div class="field-name"><span>{{key | uppercase}}</span></div>
+                <div class="field-value"><span>{{shinobiDetail[key]}}</span></div>
+            </div>
+        </div>
+    </div>
+</div>

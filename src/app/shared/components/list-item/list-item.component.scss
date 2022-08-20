@@ -1,0 +1,18 @@
+.item-container{
+    display: flex;
+        padding: 12px;
+        margin: 16px 0px;
+        border: 1px solid #5ea7b9;
+        box-shadow: 5px 5px #70c4d9;
+        background: ghostwhite;
+        border-radius: 25px;
+    .item{
+        flex: 1;
+        align-self: center;
+    }
+    .avatar{
+        width: 80px;
+        height: 80px;
+        border-radius: 50%; 
+    }
+}
